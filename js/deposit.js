@@ -12,7 +12,7 @@ function getElementValueById(elementId){
     return textElemetnValue;
 }
 function setTextElementValueById(elementId, newvalue){
-    const elementId = getElementValueById(elementId);
+    const elementId = getElementValueById();
     textElement.innertext = textElementValue;
 }
 document.getElementById('btn-deposit').addEventListener('click', function(){
@@ -27,7 +27,7 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
    2.
    */
   
-  const previousDepositTotal = getTextElementValueById('deposit-total');
+  const previousDepositTotal = setTextElementValueById('deposit-total');
   console.log(newDepositAmount);
 
 //   calculat e new deposit total 
@@ -35,7 +35,12 @@ const newDepositTotal = previousDepositTotal + newDepositAmount;
 // set deposit total value 
 setTextElementValueById('deposit-total', newDepositTotal);
 // get previous balance by using the function 
-const previousBalnaceTotal = getTextElementValueById('balance-total');
+const previousBalnaceTotal = setTextElementValueById('balance-total');
 const newBalanceTotal = previousBalnaceTotal + newDepositAmount;
 setTextElementValueById('balance-total', newBalanceTotal);
+
+// kisu bakhi oreche tai abar dekhte hbe
+
+// Module-27
+
 })
